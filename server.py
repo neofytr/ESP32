@@ -21,6 +21,8 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
                 data = conn.recv(1024)
                 if data:
                     print(f"Received: {data.decode()}")
+            conn.close() # close the TCP connection with the client and also close the socket fd
+            # TCP connection is established with the newly rcvd socket and not the welcoming socket
                 
         except ConnectionError as e:
             print(f"Connection error: {e}")

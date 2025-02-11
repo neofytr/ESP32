@@ -73,7 +73,9 @@ void connection_task(void)
 		ESP_LOGI("connection_task", "error write: %s", strerror(errno));
 	}
 
-	// close the socket as well as the TCP connection
+	// close the socket as well as the TCP connection with the server side new socket that was created
+	// TCP connection is NOT created with the server side welcoming socket but with the socket that was
+	// newly created on the server after the client knocks on the welcoming socket of the server
 	close(server_fd);
 }
 
