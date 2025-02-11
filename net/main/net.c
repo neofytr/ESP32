@@ -73,6 +73,7 @@ void connection_task(void)
 		ESP_LOGI("connection_task", "error write: %s", strerror(errno));
 	}
 
+	// close the socket as well as the TCP connection
 	close(server_fd);
 }
 
