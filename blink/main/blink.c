@@ -5,7 +5,7 @@
 
 #include "esp_log.h"
 
-#include "gpio_driver.h"
+#include "driver/gpio.h"
 
 #define BLINK_LED (2)
 
