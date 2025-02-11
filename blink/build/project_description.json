@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "blink",
-    "project_version":    "8dce749-dirty",
+    "project_version":    "d894410-dirty",
     "project_path":       "/home/raj/Desktop/esp32/blink",
     "idf_path":           "/home/raj/esp/esp-idf",
     "build_dir":          "/home/raj/Desktop/esp32/blink/build",

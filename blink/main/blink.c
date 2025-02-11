@@ -20,8 +20,10 @@ void app_main(void)
     while (1)
     {
         gpio_set_level(BLINK_LED, 1);
-        vtaskDelay(1000);
+        // divide by portTICK_PERIOD_MS to convert to milliseconds
+        // vTaskDelay delays for a number of system ticks (systick interrupts), not milliseconds
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
         gpio_set_level(BLINK_LED, 0);
-        vtaskDelay(1000);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }
